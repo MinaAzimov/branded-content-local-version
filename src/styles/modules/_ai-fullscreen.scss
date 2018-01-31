@@ -21,6 +21,16 @@
 					}
 				}
 			}
+			&--scenes {
+				.list-scrolling {
+					.ai-preview-list-item {
+						width: 652px;
+					}
+					.empty {
+						width: 652px;
+					}
+				}
+			}
 		}
 	}
 }
