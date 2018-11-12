@@ -575,7 +575,7 @@ export default class Video extends Component {
 
 		return (
 			<div className="video-container">
-				<video className="video" src={inputValue} ref={(el)=> { this.video = el }} onClick={onClick} playsInline/>
+				<video className="video" src={inputValue} ref={(el)=> { this.video = el }} onClick={onClick} playsInline />
 				<i className="iconcss icon-replay"></i>
 			</div>
 		)
