@@ -490,9 +490,9 @@ fetch(proxyUrl + targetUrl)
 		}
 
 		onVideoWaiting = () => {
-			this.setState({
-				isWaiting: true
-			})
+			// this.setState({
+			// 	isWaiting: true
+			// })
 		}
 
 
