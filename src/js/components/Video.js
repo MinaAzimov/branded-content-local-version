@@ -74,7 +74,7 @@ export default class Video extends Component {
 	}
 
 	static defaultProps = {
-		updateInterval: 1000,
+		updateInterval: 200,
 		onProgress: () => false,
 		onLoad: () => false,
 		onVideoEnd: () => false,
@@ -84,6 +84,9 @@ export default class Video extends Component {
 
 	constructor(props) {
 		super(props);
+		this.state = {
+			lastSecond: 0 
+		}
 	}
 
 	componentDidMount() {
@@ -113,134 +116,134 @@ export default class Video extends Component {
 		// Play / pause
 		if (prevProps.isPlaying !== isPlaying) {
 
-			if (isPlaying) {
-				this.play();
-				if (this.props.videoTrigger == 1) {
-					this.video.currentTime = 2.00;
-					//this.video.currentTime = hmsToSecondsOnly(this.props.data[1].startTime);
-					this.props.resetScene();
+				if (isPlaying) {
+					this.play();
+					if (this.props.videoTrigger == 1) {
+						this.video.currentTime = 2.00;
+						//this.video.currentTime = hmsToSecondsOnly(this.props.data[1].startTime);
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 2) {
+						this.video.currentTime = 55.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 3) {
+						this.video.currentTime = 126.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 4) {
+						this.video.currentTime = 195.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 5) {
+						this.video.currentTime = 139.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 6) {
+						this.video.currentTime = 10.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 7) {
+						this.video.currentTime = 89.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 8) {
+						this.video.currentTime = 127.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 9) {
+						this.video.currentTime = 55.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 10) {
+						this.video.currentTime = 195.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 11) {
+						this.video.currentTime = 0.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 12) {
+						this.video.currentTime = 55.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 13) {
+						this.video.currentTime = 125.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 14) {
+						this.video.currentTime = 21.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 15) {
+						this.video.currentTime = 130.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 16) {
+						this.video.currentTime = 128.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 17) {
+						this.video.currentTime = 10.00;
+						this.props.resetScene();
+					}
+					if (this.props.videoTrigger == 18) {
+						this.video.currentTime = 195.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 19) {
+						this.video.currentTime = 126.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 20) {
+						this.video.currentTime = 130.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 21) {
+						this.video.currentTime = 195.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 22) {
+						this.video.currentTime = 302.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 23) {
+						this.video.currentTime = 302.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 24) {
+						this.video.currentTime = 195.00;
+						this.props.resetScene();
+					}
+
+
+
+				} else {
+					this.pause();
 				}
-
-				if (this.props.videoTrigger == 2) {
-					this.video.currentTime = 55.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 3) {
-					this.video.currentTime = 126.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 4) {
-					this.video.currentTime = 195.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 5) {
-					this.video.currentTime = 139.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 6) {
-					this.video.currentTime = 10.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 7) {
-					this.video.currentTime = 89.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 8) {
-					this.video.currentTime = 127.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 9) {
-					this.video.currentTime = 55.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 10) {
-					this.video.currentTime = 195.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 11) {
-					this.video.currentTime = 0.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 12) {
-					this.video.currentTime = 55.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 13) {
-					this.video.currentTime = 125.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 14) {
-					this.video.currentTime = 21.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 15) {
-					this.video.currentTime = 130.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 16) {
-					this.video.currentTime = 128.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 17) {
-					this.video.currentTime = 10.00;
-					this.props.resetScene();
-				}
-				if (this.props.videoTrigger == 18) {
-					this.video.currentTime = 195.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 19) {
-					this.video.currentTime = 126.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 20) {
-					this.video.currentTime = 130.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 21) {
-					this.video.currentTime = 195.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 22) {
-					this.video.currentTime = 302.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 23) {
-					this.video.currentTime = 302.00;
-					this.props.resetScene();
-				}
-
-				if (this.props.videoTrigger == 24) {
-					this.video.currentTime = 195.00;
-					this.props.resetScene();
-				}
-
-
-
-			} else {
-				this.pause();
 			}
-		}
 
 
 		if (isPlaying && isScrubbing !== prevProps.isScrubbing) {
@@ -370,7 +373,8 @@ export default class Video extends Component {
 			}).join(":");
 		};
 
-
+		if(currentSecond !== this.state.lastSecond){
+			//make updates on each new second rather than every onProgress call
 			var currentTimeinHHMMSS = toHHMMSS(currentTime);
 			if((currentTime > 0.000000 && currentTime < 125.000000) || this.props.isScrubbing) {
 				if ((this.props.currentItem.indexOf(this.props.data[5].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key7) !== -1) && currentTimeinHHMMSS >= this.props.data[5].startTime && currentTimeinHHMMSS <= this.props.data[5].endTime) {
@@ -556,6 +560,12 @@ export default class Video extends Component {
 					this.props.changeSelectedSrcitem18(val);
 				}   
 		    }
+		}
+		if(currentSecond != this.state.lastSecond){
+			this.setState({
+				lastSecond: currentSecond
+			});
+		};
 	}
 
 	onLoad = () => {
